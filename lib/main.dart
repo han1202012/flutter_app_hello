@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapphello/DartType_Bool.dart';
+import 'package:flutterapphello/DartType_List.dart';
 import 'package:flutterapphello/DartType_Number.dart';
 import 'package:flutterapphello/DartType_String.dart';
 
@@ -82,7 +83,8 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             DartType_Number(),
             DartType_String(),
-            DartType_Bool()
+            DartType_Bool(),
+            DartType_List()
           ],
         ),
 

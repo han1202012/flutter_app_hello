@@ -12,7 +12,7 @@ class _DartType_BoolState extends State<DartType_Bool> {
     //调用 Demo 示例方法
     _boolDemo();
 
-    return Container(child: Text('布尔数据类型'),);
+    return Container(child: Text('布尔数据类型'));
   }
 
   /**
