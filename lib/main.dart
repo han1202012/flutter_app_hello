@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapphello/DartType_Bool.dart';
 import 'package:flutterapphello/DartType_List.dart';
+import 'package:flutterapphello/DartType_Map.dart';
 import 'package:flutterapphello/DartType_Number.dart';
 import 'package:flutterapphello/DartType_String.dart';
 
@@ -84,7 +85,8 @@ class _MyHomePageState extends State<MyHomePage> {
             DartType_Number(),
             DartType_String(),
             DartType_Bool(),
-            DartType_List()
+            DartType_List(),
+            DartType_Map()
           ],
         ),
 
