@@ -1,12 +1,11 @@
-
 import 'package:flutter/material.dart';
 
 class DartType_Map extends StatefulWidget {
   @override
-  _DartType_ListState createState() => _DartType_ListState();
+  _DartType_MapState createState() => _DartType_MapState();
 }
 
-class _DartType_ListState extends State<DartType_Map> {
+class _DartType_MapState extends State<DartType_Map> {
   @override
   Widget build(BuildContext context) {
 
@@ -14,7 +13,6 @@ class _DartType_ListState extends State<DartType_Map> {
 
     return Container(child: Text('Map 数据类型'));
   }
-
 
   /**
    * Map 示例
@@ -76,6 +74,5 @@ class _DartType_ListState extends State<DartType_Map> {
 
 
   }
-
 
 }
