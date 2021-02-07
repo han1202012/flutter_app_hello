@@ -15,7 +15,7 @@ class _DartTypeState extends State<DartType> {
 
     objectDemo();
 
-    return Container();
+    return Container(child: Text('dynamic var Object 类型'));
   }
 
   dynamicDemo(){
