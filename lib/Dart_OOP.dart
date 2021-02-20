@@ -15,8 +15,10 @@ class _Dart_OOPState extends State<Dart_OOP> {
   }
 
   constructorDemo(){
+    // 构造函数基本用法
     Student student1 = Student(6, "Tom", 18);
-    Student student2 = Student(6, "Tom", 18, );
+    // 构造函数中初始化可选参数
+    Student student2 = Student(6, "Tom", 18, city: "北京");
 
 
     Student2 stu1 = Student2();
