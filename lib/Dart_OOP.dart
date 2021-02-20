@@ -8,7 +8,19 @@ class Dart_OOP extends StatefulWidget {
 class _Dart_OOPState extends State<Dart_OOP> {
   @override
   Widget build(BuildContext context) {
+
+    factoryConstructorDemo();
+
     return Container(child: Text('Dart 面向对象'));
+  }
+
+  factoryConstructorDemo(){
+    Student2 stu1 = Student2();
+    print("stu1 创建完成 : ${stu1}");
+    Student2 stu2 = Student2();
+    print("stu2 创建完成 : ${stu2}");
+
+    print("对比 stu1 与 stu2 : stu1 == stu2 : ${stu1 == stu2}");
   }
 }
 
@@ -75,4 +87,35 @@ class Student extends Person{
     print("命名构造方法 : name : ${student.name}, age : ${student.age}");
   }
 
+  // 命名工厂构造方法 : factory 类名.方法名
+  // 命名工厂构造方法可以有返回值
+  // 如果类中有 final 修饰的成员 , 在命名构造方法中必须对其进行初始化
+  //    但是在命名工厂构造方法中 , 可以不初始化 final 类型成员
+  // 命名工厂构造方法可以有返回值
+  factory Student.init2(){
+    return Student(1, "Tom", 18);
+  }
+
 }
+
+// 使用工厂构造方法实现单例模式
+// 工厂构造方法就是单例模式
+// 工厂构造方法作用是返回之前已经创建的对象 , 之前创建对象时需要缓存下来 ;
+class Student2{
+  // 静态成员
+  static Student2 instace;
+
+  // 工厂构造方法
+  factory Student2(){
+    if(instace == null){
+      // 调用命名构造方法创建 Student2 对象
+      instace = Student2.init();
+    }
+    // 返回单例对象
+    return instace;
+  }
+
+  // 命名构造方法
+  Student2.init();
+}
+
