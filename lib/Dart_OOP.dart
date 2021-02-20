@@ -9,12 +9,16 @@ class _Dart_OOPState extends State<Dart_OOP> {
   @override
   Widget build(BuildContext context) {
 
-    factoryConstructorDemo();
+    constructorDemo();
 
     return Container(child: Text('Dart 面向对象'));
   }
 
-  factoryConstructorDemo(){
+  constructorDemo(){
+    Student student1 = Student(6, "Tom", 18);
+    Student student2 = Student(6, "Tom", 18, );
+
+
     Student2 stu1 = Student2();
     print("stu1 创建完成 : ${stu1}");
     Student2 stu2 = Student2();
@@ -32,8 +36,26 @@ class Person{
   String name;
   int age;
 
+  // 私有字段
+  int _achievement;
+
   // 标准构造方法, 下面的方法是常用的构造方法写法
   Person(this.name, this.age);
+
+  // get 方法 : 设置私有字段 achievement 的 get 方法,
+  //            让外界可以访问 Person 对象的 _achievement 私有成员
+  int get achievement => _achievement;
+
+  // set 方法 : 设置私有字段 achievement 的 set 方法,
+  //            让外界可以设置 Person 对象的 _achievement 私有成员值
+  set achievement(int achievement){
+    _achievement = achievement;
+  }
+
+  // 静态方法 , 通过类名调用
+  static log(){
+    print("log");
+  }
 
   // 重写父类的方法
   @override
