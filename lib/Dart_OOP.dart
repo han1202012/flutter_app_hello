@@ -143,3 +143,36 @@ class Student2{
   Student2.init();
 }
 
+// 定义抽象类
+abstract class AbstractPerson{
+
+  // 抽象类中可以定义没有方法体的方法
+  void log();
+
+  // 抽象类中可以包含有方法体的方法
+  void log2(){
+    print("AbstractPerson");
+  }
+
+}
+
+// 继承抽象类 , 必须实现抽象类中的抽象方法
+class Student3 extends AbstractPerson{
+
+  @override
+  void log() {
+    print("Student3");
+  }
+
+}
+
+// 抽象类继承抽象类 , 不必实现抽象类中的抽象方法
+abstract class Student4 extends AbstractPerson{
+
+}
+
+
+
+
+
+
