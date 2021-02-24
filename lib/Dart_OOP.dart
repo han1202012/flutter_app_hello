@@ -171,6 +171,18 @@ abstract class Student4 extends AbstractPerson{
 
 }
 
+// 通过 mixins 为 Student5 类添加了 AbstractPerson 特征
+// 在开发中为现有的类赋予已经存在的 mixins 类的特性
+class Student5 extends Person with AbstractPerson{
+  Student5(String name, int age) : super(name, age);
+
+  @override
+  void log() {
+    // TODO: implement log
+  }
+
+}
+
 
 
 
