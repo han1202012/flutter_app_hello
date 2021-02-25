@@ -5,6 +5,7 @@ import 'package:flutterapphello/DartType_List.dart';
 import 'package:flutterapphello/DartType_Map.dart';
 import 'package:flutterapphello/DartType_Number.dart';
 import 'package:flutterapphello/DartType_String.dart';
+import 'package:flutterapphello/Dart_Generic.dart';
 import 'package:flutterapphello/Dart_OOP.dart';
 
 void main() => runApp(MyApp());
@@ -66,6 +67,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+    // 测试泛型
+    Generic generic = Generic();
+    generic.test();
+
+
+
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
